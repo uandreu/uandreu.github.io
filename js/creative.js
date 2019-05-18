@@ -62,3 +62,42 @@
     });
 
 })(jQuery); // End of use strict
+
+// Mini JS tidbits
+
+/** Quotes **/
+
+var day = new Date().getDay();
+
+if (day === 0) {
+	document.getElementById('quotes').innerHTML = '"All right, I\'ve been thinking. When live gives you lemons? Don\'t make lemonade. '
+					+ 'Make life take the lemons back! Get mad! \'I don\'t want your damn lemons! '
+					+ 'What am I supposed to do with these?\' Demand to see life\'s manager! '
+					+ 'Make life rue the day it thought it could give Cave Johnson lemons! '
+					+ 'Do you know who I am? I\'m the man who\'s going to burn your house down! With the lemons! '
+					+ 'I\'m going to get my engineers to invent a combustible lemon that burns your house down!" - Cave Johnson';
+} else
+if (day === 1) {
+	document.getElementById('quotes').innerHTML = '"I cock my hat as I please. - Walt Whitman"';
+} else
+if (day === 2) {
+	document.getElementById('quotes').innerHTML = '"Don\'t believe everything you hear on the internet. - Abraham Lincoln"';
+} else
+if (day === 3) {
+	document.getElementById('quotes').innerHTML = '"Having a family doesn’t mean that you stop being an individual. '
+					+ 'You know the best thing you can do for the people that depend on you? Be honest with them, ' 
+					+ 'even if it means setting them free" - Mr. Meeseeks';
+} else
+if (day === 4) {
+	document.getElementById('quotes').innerHTML = '"Bad biscuits make the baker broke, bro." - Jake the Dog';
+} else
+if (day === 5) {
+	document.getElementById('quotes').innerHTML = '"We do have a lot in common. The same earth, the same air, '
+					+ 'the same sky. Maybe if we started looking at what\'s the same, instead of looking at what\'s different, '
+					+ 'well, who knows?" - Meowth';
+} else
+if (day === 6) {
+	document.getElementById('quotes').innerHTML = '"Go beyond the impossible and kick reason to the curb!" - Kamina';
+}
+
+/** Quotes End **/

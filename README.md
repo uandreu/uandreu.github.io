@@ -1,5 +1,6 @@
 # uandreu.github.io
 Personal Website
 
+A personal website for Andre Urcia. This may be taken and used as pleased under the MIT lisence.
 
-Certain elements taken from templates under MIT or CC licenses.
+Initial template taken from https://startbootstrap.com/themes/creative/ under the MIT lisence.

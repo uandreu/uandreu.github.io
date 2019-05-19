@@ -53,8 +53,30 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Top Of Page</a>
+                <a class="popup-with-form navbar-brand" href="#login-form">Login</a>
             </div>
+			
+			<!-- form itself -->
+			<form action="php/login.php" method="get" id="login-form" class="mfp-hide black-popup-block">
+				<h1>Sign in</h1>
+				<fieldset style="border:0;">
+					<p>Please type your email and password to login.</p>
+					<ul>
+						<li>
+							<label for="email"><b>Email     :</b></label>
+							<input id="email" name="email" type="email" placeholder="user@blank.com" required>
+						</li>
+						<li>
+							<label for="psw"><b>Password  :</b></label>
+							<input id="psw" name="password" type="psw" placeholder="password" required>
+						</li>
+						<button type="submit">Login</button>
+						<label>
+							<input type="checkbox" checked="checked" name="remember"> Remember me
+						</label>
+					</ul>
+				</fieldset>
+			</form>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -296,6 +318,27 @@
 	<!-- Particles JavaScript -->
 	<script src="js/particles.min.js"></script>
 	<script src="js/app.min.js"></script>
+	
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		 https://firebase.google.com/docs/web/setup#config-web-app -->
+
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+		apiKey: "AIzaSyAJS4kHArtrK9kiqSxTDD0zzii7ARL5FRc",
+		authDomain: "personalwebsite-e16f9.firebaseapp.com",
+		databaseURL: "https://personalwebsite-e16f9.firebaseio.com",
+		projectId: "personalwebsite-e16f9",
+		storageBucket: "personalwebsite-e16f9.appspot.com",
+		messagingSenderId: "644765767795",
+		appId: "1:644765767795:web:f8ec8a3d162a985a"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	</script>
 
 </body>
 

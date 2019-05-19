@@ -121,3 +121,63 @@ if (day === 6) {
 }
 
 /** Quotes End **/
+
+/** "Login System" Lol **/
+var login = document.getElementById('login');
+document.getElementById('portfolio').style.display = "none";
+
+login.onclick = function() {
+	console.log('Cookie: ' + getCookie('user'));
+	if (getCookie('user') == '') {
+		if (document.getElementById('email').value == 'admin' && document.getElementById('psw').value == 'password') {
+			document.getElementById('login-form').style.display = "none";
+			document.getElementById('portfolio').style.display = "initial";
+			login = document.getElementById('logout');
+			login.innerHTML = "Logout";
+			setCookie('user', 'elmo', 7);
+		} else {
+			document.getElementById('email').value = 'The email or password you typed is not in the system.';
+		}
+	} else {
+		document.getElementById('login-form').style.display = "initial";
+		document.getElementById('portfolio').style.display = "none";
+		login.innerHTML = "Login";
+		login = document.getElementById('login');
+		document.cookie = "user=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+	}
+}
+	
+if (getCookie('user') == 'elmo') {
+	document.getElementById('login-form').style.display = "none";
+	document.getElementById('portfolio').style.display = "initial";
+	login = document.getElementById('logout');
+	login.innerHTML = "Logout";
+}
+
+function setCookie(cname, cvalue, exdays) {
+  console.log("Trying: "+cname+" "+cvalue+" "+exdays);
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  console.log(document.cookie);
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
+/** Login End **/

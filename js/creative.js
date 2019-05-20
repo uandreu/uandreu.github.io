@@ -98,10 +98,10 @@ if (day === 0) {
 					+ 'I\'m going to get my engineers to invent a combustible lemon that burns your house down!" - Cave Johnson';
 } else
 if (day === 1) {
-	document.getElementById('quotes').innerHTML = '"I cock my hat as I please. - Walt Whitman"';
+	document.getElementById('quotes').innerHTML = '"I cock my hat as I please." - Walt Whitman';
 } else
 if (day === 2) {
-	document.getElementById('quotes').innerHTML = '"Don\'t believe everything you hear on the internet. - Abraham Lincoln"';
+	document.getElementById('quotes').innerHTML = '"Don\'t believe everything you hear on the internet." - Abraham Lincoln';
 } else
 if (day === 3) {
 	document.getElementById('quotes').innerHTML = '"Having a family doesn’t mean that you stop being an individual. '

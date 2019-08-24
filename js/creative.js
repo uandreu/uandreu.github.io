@@ -124,7 +124,6 @@ if (day === 6) {
 
 /** "Login System" Lol **/
 var login = document.getElementById('login');
-document.getElementById('portfolio').style.display = "none";
 
 login.onclick = function() {
 	console.log('Cookie: ' + getCookie('user'));
